@@ -11,7 +11,7 @@
         w3ctouch = ('ontouchstart' in window),
         IE11TOUCH = navigator.pointerEnabled,
         IE9_10TOUCH = navigator.msPointerEnabled,
-        doc=window.document,
+        doc = window.document,
         touchNames = ["mousedown", "mousemove", "mouseup", ""];
 
     if (w3ctouch) {
@@ -414,8 +414,7 @@
     var __tapped = false;    
     var __tapTimer = null;
     
-    var __rotation_single_finger = false;
-    var __rotation_single_start = [];
+    var __rotation_single_finger = false;   
     var __initial_angle = 0;
     var __rotation = 0;
 
@@ -461,7 +460,7 @@
             //case 'touchstart':
             //case 'mousedown':
             case touchNames[0]:
-                __rotation_single_start = [];
+               // __rotation_single_start = [];
                 __touchStart = true;
                 if (!pos.start || pos.start.length < 2) {
                     pos.start = utils.getPosOfEvent(ev);
