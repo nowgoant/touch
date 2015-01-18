@@ -5,8 +5,7 @@ define(function  (require,exports) {
        doc = window.document,
        engine = require('event-engine').eventEngine;
 
-   var _touch,
-      touchNames = utils.touchNames,
+   var touchNames = utils.touchNames,
        config = {
         tap: true,
         tapMaxDistance: 10,
@@ -89,8 +88,8 @@ define(function  (require,exports) {
     var handlerOriginEvent = function (ev) {
 
         var el = ev.target;
-        console.log(el);
-        console.log(ev.type);
+        //console.log(el);
+        //console.log(ev.type);
         switch (ev.type) {
             //case 'touchstart':
             //case 'mousedown':
@@ -230,6 +229,4 @@ define(function  (require,exports) {
     exports.off = exports.unbind = exports.die = _off;
     exports.config = config;
     exports.trigger = _dispatch;
-
-    exports.touch = _touch;
 });
